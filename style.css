@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* Peringatan palsu */
+.top-warning {
+    background: red;
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    color: black;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+/* Layout utama */
+.container {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+}
+
+/* Iklan */
+.ads {
+    width: 160px;
+}
+
+.ads img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 3px solid red;
+}
+
+/* Konten utama */
+.main-content {
+    flex: 5;
+    background: #111;
+    border: 2px dashed lime;
+    padding: 15px;
+    text-align: center;
+}
+
+.main-content h1 {
+    color: #ff0000;
+    text-shadow: 2px 2px 5px #00ff00;
+}
+
+/* Alert palsu */
+.fake-alert {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid red;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    border: 5px solid red;
+}
+
+
+/* Teks bawah video */
+.bottom-text {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Iklan bawah */
+.bottom-ads {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+}
+
+.bottom-ads img {
+    border: 4px solid yellow;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #777;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.fake-download {
+    margin-top: 15px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Loading palsu */
+.overlay-loading {
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    color: orange;
+    font-size: 18px;
+}
+
+/* Popup adware */
+.ad-popup {
+    position: fixed;
+    width: 280px;
+    height: 190px;
+    /* background: black; */
+    /* border: 2px solid red; */
+    /* box-shadow: 0 0 20px red; */
+    z-index: 9999;
+}
+
+.ad-header {
+    height: 22px;
+    /* background: darkred; */
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ad-popup img {
+    width: 100%;
+    height: calc(100% - 22px);
+    object-fit: cover;
+    cursor: pointer;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>FREE KARTUN STREAMING 100%</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="overlay-loading">
+    Menghubungkan ke server streaming...
+</div>
+
+<div class="top-warning">
+    ⚠️ FILM KARTUN HD
+</div>
+
+<header>
+    <marquee behavior="scroll" direction="left">
+        🔥 NONTON KARTUN GRATIS TANPA DAFTAR 🔥 FULL HD 🔥 TANPA SENSOR 🔥
+    </marquee>
+</header>
+
+<div class="container">
+
+    <!-- Iklan kiri -->
+    <aside class="ads">
+        <a href="https://contoh-website-iklan1.com" target="_blank">
+            <img src="img/ads1.jpeg" alt="Iklan 1">
+        </a>
+
+        <a href="https://contoh-website-iklan2.com" target="_blank">
+            <img src="img/ads3.jpg" alt="Iklan 2">
+        </a>
+
+         <a href="https://contoh-website-iklan1.com" target="_blank">
+            <img src="img/ads2.jfif" alt="Iklan 1">
+        </a>
+
+        <a href="https://contoh-website-iklan1.com" target="_blank">
+            <img src="img/ads8.jpg" alt="Iklan 1">
+        </a>
+    </aside>
+
+    <!-- Konten utama -->
+<main class="main-content">
+    <h1>▶ PLAY VIDEO</h1>
+
+    <div class="fake-alert">
+        Klik iklan jika video tidak bisa diputar!
+    </div>
+
+    <div class="video-wrapper">
+        <video autoplay muted controls playsinline>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video HTML5.
+        </video>
+    </div>
+
+    <div class="bottom-text">
+        Server overload. Coba refresh halaman atau klik iklan di atas.
+    </div>
+</main>
+
+ <!-- Iklan kanan -->
+<aside class="ads">
+    <a href="https://contoh-website-iklan1.com" target="_blank">
+        <img src="img/ads5.png" alt="Iklan 1">
+    </a>
+
+    <a href="https://contoh-website-iklan2.com" target="_blank">
+        <img src="img/ads6.png" alt="Iklan 2">
+    </a>
+
+    <a href="https://contoh-website-iklan2.com" target="_blank">
+        <img src="img/ads7.jfif" alt="Iklan 3">
+    </a>
+
+    <a href="https://contoh-website-iklan2.com" target="_blank">
+        <img src="img/ads9.jfif" alt="Iklan 4">
+    </a>
+</aside>
+
+</div>
+
+<!-- Iklan bawah -->
+<div class="bottom-ads">
+    <img src="https://via.placeholder.com/728x90/0000ff/ffffff?text=CLAIM+PRIZE+NOW">
+</div>
+
+ <br>
+    <button class="fake-download">⬇ Download Player HD</button>
+</div>
+
+<audio id="notif">
+    <source src="https://www.soundjay.com/buttons/sounds/button-10.mp3">
+</audio>
+
+
+<footer>
+    Streaming ilegal mirror server ke-12 | Update tiap 5 menit | Jangan lapor admin
+</footer>
+
+<script>
+/* ================= KONFIG ================= */
+const ads = [
+    "img/ads11.png",
+];
+
+const redirectTargets = [
+    "https://i.pinimg.com/1200x/03/c2/42/03c242ec3187d0b46067e868ee9d151e.jpg",
+    "https://i.pinimg.com/1200x/03/c2/42/03c242ec3187d0b46067e868ee9d151e.jpg",
+    "https://i.pinimg.com/1200x/03/c2/42/03c242ec3187d0b46067e868ee9d151e.jpg"
+];
+
+const MAX_POPUP = 20;
+let popupCount = 0;
+
+const notif = document.getElementById("notif");
+
+/* ================= LOADING PALSU ================= */
+setTimeout(() => {
+    document.querySelector(".overlay-loading").style.display = "none";
+}, 3000);
+
+/* ================= DOWNLOAD PALSU ================= */
+function fakeDownload() {
+    const content =
+`Video Player Required
+====================
+Your browser needs a new player to continue streaming.
+
+(This is a simulation file)
+`;
+    const blob = new Blob([content], { type: "application/octet-stream" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "VideoPlayer_Setup.exe"; // nama MENIPU (tapi isinya aman)
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+/* ================= REDIRECT PALSU ================= */
+function redirectUser() {
+    const target = redirectTargets[Math.floor(Math.random() * redirectTargets.length)];
+    window.location.href = target;
+}
+
+/* ================= POPUP ENGINE ================= */
+function spawnPopup() {
+    if (popupCount >= MAX_POPUP) return;
+
+    const popup = document.createElement("div");
+    popup.className = "ad-popup";
+
+    popup.style.top = Math.random() * (window.innerHeight - 200) + "px";
+    popup.style.left = Math.random() * (window.innerWidth - 300) + "px";
+
+    const header = document.createElement("div");
+    header.className = "ad-header";
+    // header.innerHTML = "<span>Advertisement</span>";
+
+    const close = document.createElement("span");
+    close.className = "close";
+    close.innerText = "✖";
+
+    /* Close palsu (50% malah nambah popup) */
+    close.onclick = () => {
+        popup.remove();
+        if (Math.random() < 0.5) {
+            setTimeout(spawnPopup, 200);
+        }
+    };
+
+    header.appendChild(close);
+
+    const img = document.createElement("img");
+    img.src = ads[Math.floor(Math.random() * ads.length)];
+
+    /* ===== PERILAKU ADWARE ASLI ===== */
+    img.onclick = () => {
+        if (Math.random() < 0.5) {
+            redirectUser();   // redirect ke web lain
+        } else {
+            fakeDownload();  // download otomatis
+        }
+    };
+
+    popup.appendChild(header);
+    popup.appendChild(img);
+    document.body.appendChild(popup);
+
+    popupCount++;
+    notif.play();
+
+    setTimeout(spawnPopup, 500);
+}
+
+/* ================= TRIGGER ================= */
+document.querySelector(".fake-download").onclick = spawnPopup;
+
+// delay 5 detik
+setTimeout(spawnPopup, 5000);
+</script>
+</body>
+</html>
